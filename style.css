@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1% 5%;
+  border-radius: 20px;
+  box-shadow: 8px 8px 14px 0px rgb(215, 215, 221);
+}
+
+.info {
+  margin: 20px;
+  text-align: center;
+  font-size: 1em;
+  color: #fff;
+}
+
+.info h1 {
+  margin: 10px;
+  font-size: 2em;
+}
+
+.ball-img {
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.ball-img img {
+  cursor: pointer;
+}
+
+.question-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1em;
+}
+
+.question-area h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.question-area input {
+  padding: 10px 20px;
+  width: 80%;
+  font-size: 20px;
+  border: 2px solid #333;
+  border-radius: 8px;
+}
+
+.question-area .answer {
+  margin-top: 30px;
+}
+
+.question-area .answer span {
+  font-weight: bold;
+}
+
+.question-area .error {
+  color: #d89997;
+  font-weight: bold;
+}
+
+.shake-animaton {
+  animation: shaking 1s;
+  animation-iteration-count: ease;
+}
+
+@keyframes shaking {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
+  }
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+.waveWrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: -1;
+}
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: 0;
+  background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+.bgTop {
+  z-index: 15;
+  opacity: 0.5;
+}
+.bgMiddle {
+  z-index: 10;
+  opacity: 0.75;
+}
+.bgBottom {
+  z-index: 5;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
+.waveTop {
+  background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.waveMiddle {
+  background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
+
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}

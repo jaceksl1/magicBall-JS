@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8 Ball</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat:400,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="info">
+        <h1>Magic Ball</h1>
+        <p>Ask a question and reveal the truth!</p>
+      </div>
+      <div class="ball-img">
+        <img class="ball-img" src="./images/ball.png" alt="Bill number 8" />
+      </div>
+      <div class="question-area">
+        <h2>Your question:</h2>
+        <input class="question" type="text" />
+        <p class="answer"></p>
+        <p class="error"></p>
+      </div>
+    </div>
+    <div class="waveWrapper waveAnimation">
+      <div class="waveWrapperInner bgTop">
+        <div
+          class="wave waveTop"
+          style="
+            background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png');
+          "
+        ></div>
+      </div>
+      <div class="waveWrapperInner bgMiddle">
+        <div
+          class="wave waveMiddle"
+          style="
+            background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png');
+          "
+        ></div>
+      </div>
+      <div class="waveWrapperInner bgBottom">
+        <div
+          class="wave waveBottom"
+          style="
+            background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png');
+          "
+        ></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
